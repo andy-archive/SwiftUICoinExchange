@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var banner = "35,123,392,122,221"
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -19,6 +22,9 @@ struct ContentView: View {
                         }
                     }
                 }
+            }
+            .refreshable { // iOS 15.0+
+                banner = "\(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
             }
             .navigationTitle("My Wallet")
         }
@@ -36,7 +42,7 @@ struct ContentView: View {
                 Spacer()
                 Text("나의 거래 현황")
                     .fontWeight(.light)
-                Text("123,232,123 원")
+                Text(banner)
                     .fontWeight(.bold)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
