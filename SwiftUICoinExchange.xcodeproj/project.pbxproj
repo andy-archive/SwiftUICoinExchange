@@ -57,8 +57,8 @@
 		38D406502B0AFFED00B6F783 /* SwiftUICoinExchange */ = {
 			isa = PBXGroup;
 			children = (
-				38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */,
-				38D406532B0AFFED00B6F783 /* ContentView.swift */,
+				38D406692B0B018200B6F783 /* Application */,
+				38D406652B0B015D00B6F783 /* View */,
 				38D406552B0AFFEF00B6F783 /* Assets.xcassets */,
 				38D406572B0AFFEF00B6F783 /* Preview Content */,
 			);
@@ -71,6 +71,38 @@
 				38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38D406652B0B015D00B6F783 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38D406672B0B016F00B6F783 /* Lectures */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38D406672B0B016F00B6F783 /* Lectures */ = {
+			isa = PBXGroup;
+			children = (
+				38D406682B0B017200B6F783 /* 231120 */,
+			);
+			path = Lectures;
+			sourceTree = "<group>";
+		};
+		38D406682B0B017200B6F783 /* 231120 */ = {
+			isa = PBXGroup;
+			children = (
+				38D406532B0AFFED00B6F783 /* ContentView.swift */,
+			);
+			path = 231120;
+			sourceTree = "<group>";
+		};
+		38D406692B0B018200B6F783 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
