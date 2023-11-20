@@ -9,15 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                bannerView()
-                LazyVStack {
-                    ForEach(1..<50) { data in
-                        listView(data: data)
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    bannerView()
+                    LazyVStack {
+                        ForEach(1..<50) { data in
+                            listView(data: data)
+                        }
                     }
                 }
             }
+            .navigationTitle("My Wallet")
         }
         .padding()
     }
