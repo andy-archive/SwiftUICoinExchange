@@ -24,16 +24,27 @@ struct ContentView: View {
     
     
     func bannerView() -> some View {
-        RoundedRectangle(cornerRadius: 25)
-            .fill(Color.gray)
+        ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .fill(Color.gray)
+                .frame(maxWidth: .infinity)
+                .frame(height: 200)
+            VStack(alignment: .leading) {
+                Spacer()
+                Text("나의 거래 현황")
+                    .fontWeight(.light)
+                Text("123,232,123 원")
+                    .fontWeight(.bold)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-            .frame(maxWidth: .infinity)
-            .frame(height: 200)
+        }
+        .padding(8)
     }
     
     func listView(data: Int) -> some View {
         HStack {
-            VStack {
+            VStack(alignment: .leading, spacing: 4) {
                 Text("코인 이름 \(data)")
                     .bold()
                 Text("COIN NAME \(data)")
@@ -42,7 +53,8 @@ struct ContentView: View {
             Spacer()
             Text("KRW-BTC")
         }
-        .padding()
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
     }
 }
 
