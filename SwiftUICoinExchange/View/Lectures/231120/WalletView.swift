@@ -10,6 +10,7 @@ import SwiftUI
 struct WalletView: View {
     
     @State private var banner = "₩ 35,123,392,122,221"
+    @State private var moneyList = [Money]()
     
     @available(iOS 17.0, *)
     var body: some View {
@@ -31,7 +32,7 @@ struct WalletView: View {
                     .safeAreaPadding([.horizontal], 12)
                     .scrollIndicators(.hidden) // 자식 뷰가 먼저 적용
                     LazyVStack {
-                        ForEach(1..<50) { data in
+                        ForEach(moneyList) { data in
                             listView(data: data)
                         }
                     }
@@ -45,7 +46,11 @@ struct WalletView: View {
 //            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
                 banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
+                moneyList = dummy.shuffled()
             }
+            .onAppear(perform: {
+                moneyList = dummy
+            })
             .navigationTitle("My Wallet")
         }
         .padding()
@@ -58,13 +63,14 @@ struct WalletView: View {
         return -result
     }
     
-    
     func bannerView() -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
-                .fill(Color.gray)
+                .fill(
+                    LinearGradient(gradient: Gradient(colors: [.yellow, .green]), startPoint: .leading, endPoint: .trailing)
+                )
                 .frame(maxWidth: .infinity)
-                .frame(height: 200)
+                .frame(height: 150)
             VStack(alignment: .leading) {
                 Spacer()
                 Text("나의 거래 현황")
@@ -82,12 +88,12 @@ struct WalletView: View {
         .padding(8)
     }
     
-    func listView(data: Int) -> some View {
+    func listView(data: Money) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("코인 이름 \(data)")
+                Text("제품 \(data.product)")
                     .bold()
-                Text("COIN NAME \(data)")
+                Text("수량 \(data.amount)")
                     .fontWeight(.light)
             }
             Spacer()
