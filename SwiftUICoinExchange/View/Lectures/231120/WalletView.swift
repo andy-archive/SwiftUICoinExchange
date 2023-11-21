@@ -15,9 +15,18 @@ struct WalletView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    LazyHStack {
-                        bannerView()
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            ForEach(1..<5) { data in
+                                bannerView()
+                            }
+                        }
                     }
+                    /* 📌 아래 뷰가 보이지 않는 이유
+                     -> 사실 보이지 않는 게 아니라 listView() 내부의 Spacer()에 의해
+                        잘려서 안 보이는 것이다
+                     -> 스크롤 지정 필요 -> embed ScrollView(.horizontal)
+                     */
                     LazyVStack {
                         ForEach(1..<50) { data in
                             listView(data: data)
