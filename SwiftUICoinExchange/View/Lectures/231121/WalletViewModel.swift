@@ -1,5 +1,5 @@
 //
-//  UpbitAPI.swift
+//  WalletViewModel.swift
 //  SwiftUICoinExchange
 //
 //  Created by Taekwon Lee on 2023/11/21.
@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct UpbitAPI {
+final class WalletViewModel: ObservableObject {
     
-    private init() { }
+    @Published var banner = "₩ 35,123,392,122,221"
+    @Published var marketList = [Market]()
     
-    static func fetchAllMarket(completion: @escaping ([Market]) -> Void) {
+    func fetchAllMarket() {
         
         guard let url = URL(string: "https://api.upbit.com/v1/market/all") else { return }
         
@@ -26,10 +27,9 @@ struct UpbitAPI {
                 
                 do {
                     let decodedData = try JSONDecoder().decode([Market].self, from: data)
-                    print(decodedData)
                     
                     DispatchQueue.main.async {
-                        completion(decodedData)
+                        self.marketList = decodedData
                     }
                 } catch {
                     print("\(error.localizedDescription)")

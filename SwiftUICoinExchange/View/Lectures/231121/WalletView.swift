@@ -9,8 +9,7 @@ import SwiftUI
 
 struct WalletView: View {
     
-    @State private var banner = "₩ 35,123,392,122,221"
-    @State private var marketList = [Market]()
+    @ObservedObject var viewModel = WalletViewModel()
     
     @available(iOS 17.0, *)
     var body: some View {
@@ -32,7 +31,7 @@ struct WalletView: View {
                     .safeAreaPadding([.horizontal], 12)
                     .scrollIndicators(.hidden) // 자식 뷰가 먼저 적용
                     LazyVStack {
-                        ForEach(marketList, id: \.self) { data in
+                        ForEach(viewModel.marketList, id: \.self) { data in
                             listView(data: data)
                         }
                     }
@@ -45,15 +44,19 @@ struct WalletView: View {
             }
 //            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
-                banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
-//                moneyList = dummy.shuffled()
+                viewModel.banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
             }
             .onAppear(perform: { // 화면이 뜰 때마다 호출
-                UpbitAPI.fetchAllMarket { market in
-                    marketList = market
-                }
-//                UpbitAPI.fetchAllMarket { [weak self] market in
-//                    self?.marketList = market
+                /* VM func -> @escaping이 필요 없음
+                 - @ObservedObject viewModel 인스턴스
+                 - ObservableObject protocol 채택한 VM 클래스
+                 - @Published VM 클래스 저장 프로퍼티
+                 */
+                viewModel.fetchAllMarket()
+                
+                /* escaping closures */
+//                UpbitAPI.fetchAllMarket { market in
+//                    viewModel.marketList = market
 //                }
             })
             .navigationTitle("My Wallet")
@@ -95,13 +98,13 @@ struct WalletView: View {
                 Spacer()
                 Text("나의 거래 현황")
                     .fontWeight(.light)
-                Text(banner)
+                Text(viewModel.banner)
                     .font(.system(size: 20))
                     .fontWeight(.bold)
             }
-            .visualEffect { content, geometryProxy in
-                content.offset(x: scrollOffset(geometryProxy))
-            }
+//            .visualEffect { content, geometryProxy in
+//                content.offset(x: scrollOffset(geometryProxy))
+//            }
             .padding(.vertical)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
