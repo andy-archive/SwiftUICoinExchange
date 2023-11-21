@@ -7,26 +7,11 @@
 
 import Foundation
 
-// 데이터에 대한 응답 구조
-struct Market: Codable {
-    
-    let market: String
-    let koreanName: String
-    let englishName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case market
-        case koreanName = "korean_name"
-        case englishName = "english_name"
-    }
-}
-
-
 struct UpbitAPI {
     
     private init() { }
     
-    static func fetchAllMarket() {
+    static func fetchAllMarket(completion: @escaping ([Market]) -> Void) {
         
         guard let url = URL(string: "https://api.upbit.com/v1/market/all") else { return }
         
@@ -42,7 +27,12 @@ struct UpbitAPI {
                 do {
                     let decodedData = try JSONDecoder().decode(Market.self, from: data)
                     print(decodedData)
+                    
+                    DispatchQueue.main.async {
+                        completion(decodedData)
+                    }
                 } catch {
+                    completion(nil)
                     print("\(error.localizedDescription)")
                 }
             }

@@ -10,7 +10,7 @@ import SwiftUI
 struct WalletView: View {
     
     @State private var banner = "₩ 35,123,392,122,221"
-    @State private var moneyList = [Money]()
+    @State private var marketList = [Market]()
     
     @available(iOS 17.0, *)
     var body: some View {
@@ -32,7 +32,7 @@ struct WalletView: View {
                     .safeAreaPadding([.horizontal], 12)
                     .scrollIndicators(.hidden) // 자식 뷰가 먼저 적용
                     LazyVStack {
-                        ForEach(moneyList) { data in
+                        ForEach(marketList, id: \.self) { data in
                             listView(data: data)
                         }
                     }
@@ -46,10 +46,15 @@ struct WalletView: View {
 //            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
                 banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
-                moneyList = dummy.shuffled()
+//                moneyList = dummy.shuffled()
             }
-            .onAppear(perform: {
-                moneyList = dummy
+            .onAppear(perform: { // 화면이 뜰 때마다 호출
+                UpbitAPI.fetchAllMarket { market in
+                    marketList = market
+                }
+//                UpbitAPI.fetchAllMarket { [weak self] market in
+//                    self?.marketList = market
+//                }
             })
             .navigationTitle("My Wallet")
         }
@@ -103,12 +108,12 @@ struct WalletView: View {
         .padding(8)
     }
     
-    func listView(data: Money) -> some View {
+    func listView(data: Market) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("제품 \(data.product)")
+                Text("\(data.market)")
                     .bold()
-                Text("₩ \(data.amount)")
+                Text("\(data.koreanName)")
                     .fontWeight(.light)
             }
             Spacer()

@@ -11,6 +11,7 @@
 		3817FF452B0C43DE00EADF16 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF432B0C43DE00EADF16 /* Banner.swift */; };
 		3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF492B0C4A9300EADF16 /* OverlayView.swift */; };
 		3817FF4F2B0C4F6D00EADF16 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */; };
+		3817FF512B0C555B00EADF16 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF502B0C555B00EADF16 /* Market.swift */; };
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
 		38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* WalletView.swift */; };
 		38D406562B0AFFEF00B6F783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406552B0AFFEF00B6F783 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		3817FF432B0C43DE00EADF16 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		3817FF492B0C4A9300EADF16 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
+		3817FF502B0C555B00EADF16 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinExchangeApp.swift; sourceTree = "<group>"; };
 		38D406532B0AFFED00B6F783 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				3817FF432B0C43DE00EADF16 /* Banner.swift */,
+				3817FF502B0C555B00EADF16 /* Market.swift */,
 				3817FF422B0C43DE00EADF16 /* Money.swift */,
 			);
 			path = Model;
@@ -215,6 +218,7 @@
 			files = (
 				3817FF442B0C43DE00EADF16 /* Money.swift in Sources */,
 				3817FF4F2B0C4F6D00EADF16 /* UpbitAPI.swift in Sources */,
+				3817FF512B0C555B00EADF16 /* Market.swift in Sources */,
 				3817FF452B0C43DE00EADF16 /* Banner.swift in Sources */,
 				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
