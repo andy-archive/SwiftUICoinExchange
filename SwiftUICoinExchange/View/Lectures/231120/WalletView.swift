@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WalletView: View {
     
-    @State private var banner = "35,123,392,122,221"
+    @State private var banner = "₩ 35,123,392,122,221"
     
     @available(iOS 17.0, *)
     var body: some View {
@@ -28,7 +28,8 @@ struct WalletView: View {
                         .scrollTargetLayout()
                     }
                     .scrollTargetBehavior(.viewAligned)
-                    .safeAreaPadding([.horizontal], 4)
+                    .safeAreaPadding([.horizontal], 12)
+                    .scrollIndicators(.hidden) // 자식 뷰가 먼저 적용
                     LazyVStack {
                         ForEach(1..<50) { data in
                             listView(data: data)
@@ -41,12 +42,20 @@ struct WalletView: View {
                      */
                 }
             }
+//            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
-                banner = "\(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
+                banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
             }
             .navigationTitle("My Wallet")
         }
         .padding()
+    }
+    
+    /* 컨테이너 뷰에 대한 좌표 및 크기에 접근 가능*/
+    private func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
+        let result = proxy.bounds(of: .scrollView)?.minX ?? 0 // 멈추려고 하는 위치 설정
+        
+        return -result
     }
     
     
@@ -61,10 +70,14 @@ struct WalletView: View {
                 Text("나의 거래 현황")
                     .fontWeight(.light)
                 Text(banner)
+                    .font(.system(size: 20))
                     .fontWeight(.bold)
             }
+            .visualEffect { content, geometryProxy in
+                content.offset(x: scrollOffset(geometryProxy))
+            }
+            .padding(.vertical)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
         }
         .padding(8)
     }
