@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
-		38D406542B0AFFED00B6F783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* ContentView.swift */; };
+		38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* WalletView.swift */; };
 		38D406562B0AFFEF00B6F783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406552B0AFFEF00B6F783 /* Assets.xcassets */; };
 		38D406592B0AFFEF00B6F783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */; };
 		38D406602B0B009C00B6F783 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 38D4065F2B0B009C00B6F783 /* .gitignore */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinExchangeApp.swift; sourceTree = "<group>"; };
-		38D406532B0AFFED00B6F783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38D406532B0AFFED00B6F783 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		38D406552B0AFFEF00B6F783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38D4065F2B0B009C00B6F783 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		38D406682B0B017200B6F783 /* 231120 */ = {
 			isa = PBXGroup;
 			children = (
-				38D406532B0AFFED00B6F783 /* ContentView.swift */,
+				38D406532B0AFFED00B6F783 /* WalletView.swift */,
 			);
 			path = 231120;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D406542B0AFFED00B6F783 /* ContentView.swift in Sources */,
+				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

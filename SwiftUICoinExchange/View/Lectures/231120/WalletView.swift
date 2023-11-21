@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WalletView.swift
 //  SwiftUICoinExchange
 //
 //  Created by Taekwon Lee on 2023/11/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WalletView: View {
     
     @State private var banner = "35,123,392,122,221"
     
@@ -15,7 +15,9 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    bannerView()
+                    LazyHStack {
+                        bannerView()
+                    }
                     LazyVStack {
                         ForEach(1..<50) { data in
                             listView(data: data)
@@ -67,8 +69,7 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    WalletView()
 }
+
