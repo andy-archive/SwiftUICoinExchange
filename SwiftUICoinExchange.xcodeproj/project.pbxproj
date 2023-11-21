@@ -51,6 +51,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3817FF4C2B0C4F3A00EADF16 /* 231121 */ = {
+			isa = PBXGroup;
+			children = (
+				38D406532B0AFFED00B6F783 /* WalletView.swift */,
+			);
+			path = 231121;
+			sourceTree = "<group>";
+		};
+		3817FF4D2B0C4F4400EADF16 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		38D406452B0AFFED00B6F783 = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +87,12 @@
 		38D406502B0AFFED00B6F783 /* SwiftUICoinExchange */ = {
 			isa = PBXGroup;
 			children = (
-				3817FF462B0C43E700EADF16 /* Model */,
 				38D406692B0B018200B6F783 /* Application */,
-				38D406652B0B015D00B6F783 /* View */,
 				38D406552B0AFFEF00B6F783 /* Assets.xcassets */,
+				3817FF462B0C43E700EADF16 /* Model */,
+				3817FF4D2B0C4F4400EADF16 /* Network */,
 				38D406572B0AFFEF00B6F783 /* Preview Content */,
+				38D406652B0B015D00B6F783 /* View */,
 			);
 			path = SwiftUICoinExchange;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				38D406682B0B017200B6F783 /* 231120 */,
+				3817FF4C2B0C4F3A00EADF16 /* 231121 */,
 			);
 			path = Lectures;
 			sourceTree = "<group>";
@@ -108,7 +125,6 @@
 		38D406682B0B017200B6F783 /* 231120 */ = {
 			isa = PBXGroup;
 			children = (
-				38D406532B0AFFED00B6F783 /* WalletView.swift */,
 				3817FF492B0C4A9300EADF16 /* OverlayView.swift */,
 			);
 			path = 231120;
