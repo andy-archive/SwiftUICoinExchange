@@ -10,58 +10,46 @@ import SwiftUI
 struct WalletView: View {
     
     @ObservedObject var viewModel = WalletViewModel()
+    @State var renderingTestNumber = 0
     
     @available(iOS 17.0, *)
     var body: some View {
         NavigationStack {
             ScrollView {
+                Text("TEST: \(renderingTestNumber)")
+                NavigationLink("BannerTest 화면", value: renderingTestNumber)
                 VStack {
                     ScrollView(.horizontal) {
                         LazyHStack {
                             ForEach(1..<5) { data in
                                 bannerView()
-                                    .containerRelativeFrame(.horizontal)
                                     // iOS 17.0+ 디바이스 너비에 맞게 해결
+                                    .containerRelativeFrame(.horizontal)
+                                    .onTapGesture {
+                                        viewModel.fetchBanner()
+//                                        renderingTestNum = Int.random(in: 1...100)
+                                    }
                             }
                         }
                         // 스크롤 하고자 하는 대상에 대한 레이아웃 설정
                         .scrollTargetLayout()
+                        .safeAreaPadding([.horizontal], 12)
+                        .scrollIndicators(.hidden)
                     }
                     .scrollTargetBehavior(.viewAligned)
-                    .safeAreaPadding([.horizontal], 12)
-                    .scrollIndicators(.hidden) // 자식 뷰가 먼저 적용
-                    LazyVStack {
-                        ForEach(viewModel.marketList, id: \.self) { data in
-                            listView(data: data)
-                        }
-                    }
-                    /* 📌 LazyVStack이 보이지 않는 이유
-                     -> 사실 보이지 않는 게 아니라 listView() 내부의 Spacer()에 의해
-                        잘려서 안 보이는 것이다
-                     -> 스크롤 지정 필요 -> embed ScrollView(.horizontal)
-                     */
+                    ListView() // 하위뷰
                 }
             }
-//            .scrollIndicators(.hidden)
+            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
                 viewModel.fetchBanner()
+                renderingTestNumber = Int.random(in: 1...100)
             }
-            .onAppear(perform: { // 화면이 뜰 때마다 호출
-                /* VM func -> @escaping이 필요 없음
-                 - @ObservedObject viewModel 인스턴스
-                 - ObservableObject protocol 채택한 VM 클래스
-                 - @Published VM 클래스 저장 프로퍼티
-                 */
-                viewModel.fetchAllMarket()
-                
-                /* escaping closures */
-//                UpbitAPI.fetchAllMarket { market in
-//                    viewModel.marketList = market
-//                }
-            })
             .navigationTitle("My Wallet")
+            .navigationDestination(for: Int.self) { item in
+                BannerTestView(testNumber: $renderingTestNumber)
+            }
         }
-        .padding()
     }
     
     /* 컨테이너 뷰에 대한 좌표 및 크기에 접근 가능*/
@@ -110,24 +98,31 @@ struct WalletView: View {
         }
         .padding(8)
     }
-    
-    func listView(data: Market) -> some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(data.market)
-                    .bold()
-                Text(data.koreanName)
-                    .fontWeight(.light)
-            }
-            Spacer()
-            Text(data.market)
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 8)
-    }
 }
 
 #Preview {
     WalletView()
 }
 
+/* 📌 LazyVStack이 보이지 않는 이유
+ -> 사실 보이지 않는 게 아니라 listView() 내부의 Spacer()에 의해
+    잘려서 안 보이는 것이다
+ -> 스크롤 지정 필요 -> embed ScrollView(.horizontal)
+ */
+
+
+/* 📌 viewWillAppear -> 생략
+ .onAppear(perform: { // 화면이 뜰 때마다 호출
+     /* VM func -> @escaping이 필요 없음
+      - @ObservedObject viewModel 인스턴스
+      - ObservableObject protocol 채택한 VM 클래스
+      - @Published VM 클래스 저장 프로퍼티
+      */
+     viewModel.fetchAllMarket()
+     
+     /* escaping closures */
+//                UpbitAPI.fetchAllMarket { market in
+//                    viewModel.marketList = market
+//                }
+ })
+ */
