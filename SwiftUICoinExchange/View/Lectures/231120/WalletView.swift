@@ -11,6 +11,7 @@ struct WalletView: View {
     
     @State private var banner = "35,123,392,122,221"
     
+    @available(iOS 17.0, *)
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -19,19 +20,25 @@ struct WalletView: View {
                         LazyHStack {
                             ForEach(1..<5) { data in
                                 bannerView()
+                                    .containerRelativeFrame(.horizontal)
+                                    // iOS 17.0+ 디바이스 너비에 맞게 해결
                             }
                         }
+                        // 스크롤 하고자 하는 대상에 대한 레이아웃 설정
+                        .scrollTargetLayout()
                     }
-                    /* 📌 아래 뷰가 보이지 않는 이유
-                     -> 사실 보이지 않는 게 아니라 listView() 내부의 Spacer()에 의해
-                        잘려서 안 보이는 것이다
-                     -> 스크롤 지정 필요 -> embed ScrollView(.horizontal)
-                     */
+                    .scrollTargetBehavior(.viewAligned)
+                    .safeAreaPadding([.horizontal], 4)
                     LazyVStack {
                         ForEach(1..<50) { data in
                             listView(data: data)
                         }
                     }
+                    /* 📌 LazyVStack이 보이지 않는 이유
+                     -> 사실 보이지 않는 게 아니라 listView() 내부의 Spacer()에 의해
+                        잘려서 안 보이는 것이다
+                     -> 스크롤 지정 필요 -> embed ScrollView(.horizontal)
+                     */
                 }
             }
             .refreshable { // iOS 15.0+
