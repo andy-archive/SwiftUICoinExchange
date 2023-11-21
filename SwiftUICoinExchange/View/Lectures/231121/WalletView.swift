@@ -44,7 +44,7 @@ struct WalletView: View {
             }
 //            .scrollIndicators(.hidden)
             .refreshable { // iOS 15.0+
-                viewModel.banner = "₩ \(Int.random(in: 10_000_000...100_000_000_000_000).formatted())"
+                viewModel.fetchBanner()
             }
             .onAppear(perform: { // 화면이 뜰 때마다 호출
                 /* VM func -> @escaping이 필요 없음
@@ -98,7 +98,7 @@ struct WalletView: View {
                 Spacer()
                 Text("나의 거래 현황")
                     .fontWeight(.light)
-                Text(viewModel.banner)
+                Text(viewModel.banner.totalFormat)
                     .font(.system(size: 20))
                     .fontWeight(.bold)
             }
@@ -114,13 +114,13 @@ struct WalletView: View {
     func listView(data: Market) -> some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(data.market)")
+                Text(data.market)
                     .bold()
-                Text("\(data.koreanName)")
+                Text(data.koreanName)
                     .fontWeight(.light)
             }
             Spacer()
-            Text("KRW-BTC")
+            Text(data.market)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)

@@ -9,8 +9,13 @@ import Foundation
 
 final class WalletViewModel: ObservableObject {
     
-    @Published var banner = "₩ 35,123,392,122,221"
+    
+    @Published var banner = Banner()
     @Published var marketList = [Market]()
+    
+    func fetchBanner() {
+        banner = Banner()
+    }
     
     func fetchAllMarket() {
         
