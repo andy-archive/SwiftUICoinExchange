@@ -65,10 +65,25 @@ struct WalletView: View {
     
     func bannerView() -> some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 25)
+            Rectangle()
                 .fill(
-                    LinearGradient(gradient: Gradient(colors: [.yellow, .green]), startPoint: .leading, endPoint: .trailing)
+                    LinearGradient(
+                        gradient: Gradient(colors: [.yellow, .green]),
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
                 )
+                .overlay {
+                    Circle()
+                        .fill(.blue.opacity(0.2))
+                        .offset(x: 60, y: -60)
+                        .scaleEffect(1.2, anchor: .topLeading) // 내부에서 옆으로 삐져 나온 것
+                    Circle()
+                        .fill(.blue.opacity(0.2))
+                        .offset(x: 120)
+                        .scaleEffect(1.2, anchor: .topLeading) // 내부에서 옆으로 삐져 나온 것
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 25)) // 위에 overlay에 의해 튀어나온 부분을 잘라 냄
                 .frame(maxWidth: .infinity)
                 .frame(height: 150)
             VStack(alignment: .leading) {
@@ -93,7 +108,7 @@ struct WalletView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("제품 \(data.product)")
                     .bold()
-                Text("수량 \(data.amount)")
+                Text("₩ \(data.amount)")
                     .fontWeight(.light)
             }
             Spacer()
