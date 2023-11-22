@@ -14,7 +14,7 @@ struct CardListView: View {
     
     var body: some View {
         VStack {
-            topTItle()
+            topTitle()
             makeCardList()
             HStack(spacing: 30) {
                 Button("Animation ON") {
@@ -32,12 +32,12 @@ struct CardListView: View {
         }
         .overlay {
             if isCardDetailViewPresented {
-                CardDetailView()
+                CardDetailView(isViewPresented: $isCardDetailViewPresented)
             }
         }
     }
     
-    func topTItle() -> some View {
+    func topTitle() -> some View {
         Text("Andy's Wallet")
             .font(.largeTitle)
             .bold()
@@ -58,6 +58,18 @@ struct CardListView: View {
                 makeCard(index: item)
             }
         }
+        .background(.red.opacity(0.1))
+        .overlay {
+            Rectangle()
+                .fill(.black
+                    .opacity(isExpandable ? 0 : 0.01)
+                )
+                .onTapGesture {
+                    withAnimation {
+                        isExpandable.toggle()
+                    }
+                }
+        }
     }
     
     func makeCard(index: Int) -> some View {
@@ -71,11 +83,7 @@ struct CardListView: View {
             )
             .onTapGesture {
                 withAnimation(.smooth(duration: 0.8, extraBounce: 0.2)) {
-                    if isExpandable == true {
-                        isCardDetailViewPresented.toggle()
-                    } else {
-                        isExpandable.toggle()
-                    }
+                    isCardDetailViewPresented.toggle()
                 }
             }
     }
