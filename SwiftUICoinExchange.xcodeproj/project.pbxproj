@@ -16,6 +16,7 @@
 		3817FF562B0C737200EADF16 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF552B0C737100EADF16 /* ListView.swift */; };
 		3817FF582B0C737900EADF16 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF572B0C737900EADF16 /* ListViewModel.swift */; };
 		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
+		389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F785E2B0C915D000708F2 /* RaceCondition.swift */; };
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
 		38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* WalletView.swift */; };
 		38D406562B0AFFEF00B6F783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406552B0AFFEF00B6F783 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		3817FF552B0C737100EADF16 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		3817FF572B0C737900EADF16 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
+		389F785E2B0C915D000708F2 /* RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCondition.swift; sourceTree = "<group>"; };
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinExchangeApp.swift; sourceTree = "<group>"; };
 		38D406532B0AFFED00B6F783 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				386D55852B0C80D400EAD433 /* BannerTestView.swift */,
 				3817FF552B0C737100EADF16 /* ListView.swift */,
 				3817FF572B0C737900EADF16 /* ListViewModel.swift */,
+				389F78602B0C95FD000708F2 /* RaceCondition */,
 				38D406532B0AFFED00B6F783 /* WalletView.swift */,
 				3817FF532B0C599900EADF16 /* WalletViewModel.swift */,
 			);
@@ -82,6 +85,14 @@
 				3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		389F78602B0C95FD000708F2 /* RaceCondition */ = {
+			isa = PBXGroup;
+			children = (
+				389F785E2B0C915D000708F2 /* RaceCondition.swift */,
+			);
+			path = RaceCondition;
 			sourceTree = "<group>";
 		};
 		38D406452B0AFFED00B6F783 = {
@@ -236,6 +247,7 @@
 				386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */,
 				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
 				3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */,
+				389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
 				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
 				3817FF562B0C737200EADF16 /* ListView.swift in Sources */,
