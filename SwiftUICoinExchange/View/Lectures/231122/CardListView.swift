@@ -14,15 +14,15 @@ struct CardListView: View {
     var body: some View {
         VStack {
             topTItle()
-            Spacer()
+            makeCardList()
             HStack(spacing: 30) {
                 Button("Animation ON") {
-                    withAnimation(.bouncy(duration: 1.2)) { // 딜레이
+                    withAnimation(.bouncy(duration: 0.8)) { // 딜레이
                         isExpandable = true
                     }
                 }
                 Button("Animation OFF") {
-                    withAnimation(.smooth(duration: 1, extraBounce: 0.4)) {
+                    withAnimation(.smooth(duration: 0.8, extraBounce: 0.2)) {
                         isExpandable = false
                     }
                 }
@@ -46,6 +46,23 @@ struct CardListView: View {
             .padding(12)
     }
     
+    func makeCardList() -> some View {
+        ScrollView {
+            ForEach(0..<5) { item in
+                makeCard(index: item)
+            }
+        }
+    }
+    
+    func makeCard(index: Int) -> some View {
+        RoundedRectangle(cornerRadius: 15.0)
+            .fill(Color.random())
+            .frame(height: 150)
+            .padding(.horizontal)
+            .padding(.vertical, 4)
+            .offset(y: CGFloat(index) * (isExpandable ? 0 : -130))
+    }
+    
     func topOverlayButton() -> some View {
         Button(action: {
             
@@ -65,3 +82,20 @@ struct CardListView: View {
 #Preview {
     CardListView()
 }
+
+/* 📌 offset 사고과정
+ func makeCardList() -> some View {
+     ScrollView {
+//            makeCard()
+//            makeCard()
+//                .offset(y: -130)
+//            makeCard()
+//                .offset(y: -260)
+//            makeCard()
+//                .offset(y: -390)
+         ForEach(0..<5) { item in
+             makeCard(index: item)
+         }
+     }
+ }
+ */
