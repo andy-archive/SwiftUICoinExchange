@@ -72,7 +72,9 @@ struct CardListView: View {
     
     func topOverlayButton() -> some View {
         Button(action: {
-            
+            withAnimation {
+                isExpandable = false
+            }
         }, label: {
             Image(systemName: "plus")
                 .foregroundStyle(.white)
@@ -80,7 +82,7 @@ struct CardListView: View {
                 .background(.black, in: Circle())
         })
         .rotationEffect(
-            .degrees(isExpandable ? 270 : 45)
+            .degrees(isExpandable ? 45 : 270)
         )
         .opacity(isExpandable ? 1 : 0)
     }
