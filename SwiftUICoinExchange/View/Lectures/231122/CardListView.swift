@@ -11,6 +11,9 @@ struct CardListView: View {
     
     @State private var isExpandable = false
     @State private var isCardDetailViewPresented = false
+    @State private var cardList = cardModelData
+    @State private var selectedCard = CardModel(name: "", index: 0)
+    @Namespace var animation //: Namespace.ID // 동일한 그룹임을 인식
     
     var body: some View {
         VStack {
@@ -30,11 +33,15 @@ struct CardListView: View {
             }
             .padding()
         }
-        .overlay {
+        .overlay(content: {
             if isCardDetailViewPresented {
-                CardDetailView(isViewPresented: $isCardDetailViewPresented)
+                CardDetailView(
+                    isViewPresented: $isCardDetailViewPresented,
+                    currentCard: selectedCard,
+                    animation: animation
+                )
             }
-        }
+        })
     }
     
     func topTitle() -> some View {
@@ -54,8 +61,8 @@ struct CardListView: View {
     
     func makeCardList() -> some View {
         ScrollView {
-            ForEach(0..<5) { item in
-                makeCard(index: item)
+            ForEach(cardList, id: \.self) { item in
+                makeCard(item)
             }
         }
         .background(.red.opacity(0.1))
@@ -72,20 +79,22 @@ struct CardListView: View {
         }
     }
     
-    func makeCard(index: Int) -> some View {
+    func makeCard(_ data: CardModel) -> some View {
         RoundedRectangle(cornerRadius: 15.0)
             .fill(Color.random())
             .frame(height: 150)
             .padding(.horizontal)
             .padding(.vertical, 4)
             .offset(
-                y: CGFloat(index) * (isExpandable ? 0 : -130)
+                y: CGFloat(data.index) * (isExpandable ? 0 : -130)
             )
             .onTapGesture {
                 withAnimation(.smooth(duration: 0.8, extraBounce: 0.2)) {
-                    isCardDetailViewPresented.toggle()
+                    selectedCard = data
+                    isCardDetailViewPresented = true
                 }
             }
+            .matchedGeometryEffect(id: data, in: animation)
     }
     
     func topOverlayButton() -> some View {

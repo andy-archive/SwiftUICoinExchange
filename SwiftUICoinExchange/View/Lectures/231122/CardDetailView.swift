@@ -10,6 +10,8 @@ import SwiftUI
 struct CardDetailView: View {
     
     @Binding var isViewPresented: Bool
+    let currentCard: CardModel
+    var animation: Namespace.ID
     
     var body: some View {
         ZStack {
@@ -20,10 +22,13 @@ struct CardDetailView: View {
                     .frame(height: 150)
                     .padding(.horizontal)
                     .onTapGesture {
-                        isViewPresented.toggle()
+                        withAnimation(.bouncy(duration: 1.0)) {
+                            isViewPresented = false
+                        }
                     }
+                    .matchedGeometryEffect(id: currentCard, in: animation)
                 .padding(.vertical, 4)
-                Text("Hello")
+                Text(currentCard.name)
                     .bold()
                     .font(.system(size: 30))
                 Spacer()
@@ -32,6 +37,8 @@ struct CardDetailView: View {
     }
 }
 
-#Preview {
-    CardDetailView(isViewPresented: .constant(true))
-}
+//#Preview {
+//    CardDetailView(
+//        isViewPresented: .constant(true),
+//    )
+//}
