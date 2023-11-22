@@ -60,7 +60,14 @@ struct CardListView: View {
             .frame(height: 150)
             .padding(.horizontal)
             .padding(.vertical, 4)
-            .offset(y: CGFloat(index) * (isExpandable ? 0 : -130))
+            .offset(
+                y: CGFloat(index) * (isExpandable ? 0 : -130)
+            )
+            .onTapGesture {
+                withAnimation(.smooth(duration: 0.8, extraBounce: 0.2)) {
+                    isExpandable.toggle()
+                }
+            }
     }
     
     func topOverlayButton() -> some View {
