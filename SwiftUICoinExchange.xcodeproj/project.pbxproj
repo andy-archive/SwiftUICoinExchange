@@ -17,6 +17,7 @@
 		3817FF582B0C737900EADF16 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF572B0C737900EADF16 /* ListViewModel.swift */; };
 		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
 		389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F785E2B0C915D000708F2 /* RaceCondition.swift */; };
+		389F78662B0D8727000708F2 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F78652B0D8727000708F2 /* CardListView.swift */; };
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
 		38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* WalletView.swift */; };
 		38D406562B0AFFEF00B6F783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406552B0AFFEF00B6F783 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		3817FF572B0C737900EADF16 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
 		389F785E2B0C915D000708F2 /* RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCondition.swift; sourceTree = "<group>"; };
+		389F78652B0D8727000708F2 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinExchangeApp.swift; sourceTree = "<group>"; };
 		38D406532B0AFFED00B6F783 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = RaceCondition;
 			sourceTree = "<group>";
 		};
+		389F78622B0D86E7000708F2 /* 231122 */ = {
+			isa = PBXGroup;
+			children = (
+				389F78652B0D8727000708F2 /* CardListView.swift */,
+			);
+			path = 231122;
+			sourceTree = "<group>";
+		};
 		38D406452B0AFFED00B6F783 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 			children = (
 				38D406682B0B017200B6F783 /* 231120 */,
 				3817FF4C2B0C4F3A00EADF16 /* 231121 */,
+				389F78622B0D86E7000708F2 /* 231122 */,
 			);
 			path = Lectures;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 				389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
 				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
+				389F78662B0D8727000708F2 /* CardListView.swift in Sources */,
 				3817FF562B0C737200EADF16 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
