@@ -24,6 +24,7 @@
 		38D406592B0AFFEF00B6F783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */; };
 		38D406602B0B009C00B6F783 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 38D4065F2B0B009C00B6F783 /* .gitignore */; };
 		38D406622B0B00B000B6F783 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38D406612B0B00B000B6F783 /* README.md */; };
+		38D5C6D42B0D99CC0085386D /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5C6D32B0D99CC0085386D /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38D4065F2B0B009C00B6F783 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		38D406612B0B00B000B6F783 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38D5C6D32B0D99CC0085386D /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				389F78652B0D8727000708F2 /* CardListView.swift */,
+				38D5C6D32B0D99CC0085386D /* CardDetailView.swift */,
 			);
 			path = 231122;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
 				389F78662B0D8727000708F2 /* CardListView.swift in Sources */,
 				3817FF562B0C737200EADF16 /* ListView.swift in Sources */,
+				38D5C6D42B0D99CC0085386D /* CardDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

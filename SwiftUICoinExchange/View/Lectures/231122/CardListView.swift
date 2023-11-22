@@ -10,6 +10,7 @@ import SwiftUI
 struct CardListView: View {
     
     @State private var isExpandable = false
+    @State private var isCardDetailViewPresented = false
     
     var body: some View {
         VStack {
@@ -28,6 +29,11 @@ struct CardListView: View {
                 }
             }
             .padding()
+        }
+        .overlay {
+            if isCardDetailViewPresented {
+                CardDetailView()
+            }
         }
     }
     
@@ -65,7 +71,11 @@ struct CardListView: View {
             )
             .onTapGesture {
                 withAnimation(.smooth(duration: 0.8, extraBounce: 0.2)) {
-                    isExpandable.toggle()
+                    if isExpandable == true {
+                        isCardDetailViewPresented.toggle()
+                    } else {
+                        isExpandable.toggle()
+                    }
                 }
             }
     }
