@@ -15,16 +15,19 @@ struct CardListView: View {
         VStack {
             topTItle()
             Spacer()
-            Button("AnimationOn") {
-                withAnimation(.bouncy) { // 딜레이
-                    isExpandable = true
+            HStack(spacing: 30) {
+                Button("Animation ON") {
+                    withAnimation(.bouncy(duration: 1.2)) { // 딜레이
+                        isExpandable = true
+                    }
+                }
+                Button("Animation OFF") {
+                    withAnimation(.smooth(duration: 1, extraBounce: 0.4)) {
+                        isExpandable = false
+                    }
                 }
             }
-            Button("AnimationOff") {
-                withAnimation(.smooth(duration: 1, extraBounce: 0.8)) {
-                    isExpandable = false
-                }
-            }
+            .padding()
         }
     }
     
@@ -37,9 +40,27 @@ struct CardListView: View {
                 maxWidth: .infinity,
                 alignment: isExpandable ? .leading : .center
             )
-            .background(.yellow)
+            .overlay(alignment: .trailing) {
+                topOverlayButton()
+            }
+            .padding(12)
     }
     
+    func topOverlayButton() -> some View {
+        Button(action: {
+            
+        }, label: {
+            Image(systemName: "plus")
+                .foregroundStyle(.white)
+                .padding()
+                .background(.black, in: Circle())
+        })
+        .rotationEffect(
+            .degrees(isExpandable ? 270 : 45)
+        )
+        .opacity(isExpandable ? 1 : 0)
+    }
+}
 
 #Preview {
     CardListView()
