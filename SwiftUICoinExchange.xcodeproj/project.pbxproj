@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3817FF442B0C43DE00EADF16 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF422B0C43DE00EADF16 /* Money.swift */; };
+		3817FF452B0C43DE00EADF16 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF432B0C43DE00EADF16 /* Banner.swift */; };
+		3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF492B0C4A9300EADF16 /* OverlayView.swift */; };
+		3817FF4F2B0C4F6D00EADF16 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */; };
+		3817FF512B0C555B00EADF16 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF502B0C555B00EADF16 /* Market.swift */; };
+		3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF532B0C599900EADF16 /* WalletViewModel.swift */; };
+		3817FF562B0C737200EADF16 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF552B0C737100EADF16 /* ListView.swift */; };
+		3817FF582B0C737900EADF16 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF572B0C737900EADF16 /* ListViewModel.swift */; };
+		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
-		38D406542B0AFFED00B6F783 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* ContentView.swift */; };
+		38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406532B0AFFED00B6F783 /* WalletView.swift */; };
 		38D406562B0AFFEF00B6F783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406552B0AFFEF00B6F783 /* Assets.xcassets */; };
 		38D406592B0AFFEF00B6F783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */; };
 		38D406602B0B009C00B6F783 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 38D4065F2B0B009C00B6F783 /* .gitignore */; };
@@ -16,9 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3817FF422B0C43DE00EADF16 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		3817FF432B0C43DE00EADF16 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		3817FF492B0C4A9300EADF16 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
+		3817FF502B0C555B00EADF16 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		3817FF532B0C599900EADF16 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
+		3817FF552B0C737100EADF16 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3817FF572B0C737900EADF16 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICoinExchangeApp.swift; sourceTree = "<group>"; };
-		38D406532B0AFFED00B6F783 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38D406532B0AFFED00B6F783 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		38D406552B0AFFEF00B6F783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38D406582B0AFFEF00B6F783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38D4065F2B0B009C00B6F783 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -36,6 +54,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3817FF462B0C43E700EADF16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3817FF432B0C43DE00EADF16 /* Banner.swift */,
+				3817FF502B0C555B00EADF16 /* Market.swift */,
+				3817FF422B0C43DE00EADF16 /* Money.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3817FF4C2B0C4F3A00EADF16 /* 231121 */ = {
+			isa = PBXGroup;
+			children = (
+				386D55852B0C80D400EAD433 /* BannerTestView.swift */,
+				3817FF552B0C737100EADF16 /* ListView.swift */,
+				3817FF572B0C737900EADF16 /* ListViewModel.swift */,
+				38D406532B0AFFED00B6F783 /* WalletView.swift */,
+				3817FF532B0C599900EADF16 /* WalletViewModel.swift */,
+			);
+			path = 231121;
+			sourceTree = "<group>";
+		};
+		3817FF4D2B0C4F4400EADF16 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		38D406452B0AFFED00B6F783 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				38D406692B0B018200B6F783 /* Application */,
-				38D406652B0B015D00B6F783 /* View */,
 				38D406552B0AFFEF00B6F783 /* Assets.xcassets */,
+				3817FF462B0C43E700EADF16 /* Model */,
+				3817FF4D2B0C4F4400EADF16 /* Network */,
 				38D406572B0AFFEF00B6F783 /* Preview Content */,
+				38D406652B0B015D00B6F783 /* View */,
 			);
 			path = SwiftUICoinExchange;
 			sourceTree = "<group>";
@@ -85,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				38D406682B0B017200B6F783 /* 231120 */,
+				3817FF4C2B0C4F3A00EADF16 /* 231121 */,
 			);
 			path = Lectures;
 			sourceTree = "<group>";
@@ -92,7 +143,7 @@
 		38D406682B0B017200B6F783 /* 231120 */ = {
 			isa = PBXGroup;
 			children = (
-				38D406532B0AFFED00B6F783 /* ContentView.swift */,
+				3817FF492B0C4A9300EADF16 /* OverlayView.swift */,
 			);
 			path = 231120;
 			sourceTree = "<group>";
@@ -133,7 +184,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					38D4064D2B0AFFED00B6F783 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -177,8 +228,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D406542B0AFFED00B6F783 /* ContentView.swift in Sources */,
+				3817FF582B0C737900EADF16 /* ListViewModel.swift in Sources */,
+				3817FF442B0C43DE00EADF16 /* Money.swift in Sources */,
+				3817FF4F2B0C4F6D00EADF16 /* UpbitAPI.swift in Sources */,
+				3817FF512B0C555B00EADF16 /* Market.swift in Sources */,
+				3817FF452B0C43DE00EADF16 /* Banner.swift in Sources */,
+				386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */,
+				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
+				3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
+				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
+				3817FF562B0C737200EADF16 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +281,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -281,6 +342,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -315,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +410,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
