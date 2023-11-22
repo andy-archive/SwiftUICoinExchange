@@ -105,8 +105,8 @@
 		389F78622B0D86E7000708F2 /* 231122 */ = {
 			isa = PBXGroup;
 			children = (
-				389F78652B0D8727000708F2 /* CardListView.swift */,
 				38D5C6D32B0D99CC0085386D /* CardDetailView.swift */,
+				389F78652B0D8727000708F2 /* CardListView.swift */,
 			);
 			path = 231122;
 			sourceTree = "<group>";

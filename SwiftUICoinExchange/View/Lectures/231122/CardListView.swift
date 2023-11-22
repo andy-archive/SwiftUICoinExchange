@@ -17,7 +17,7 @@ struct CardListView: View {
     
     var body: some View {
         VStack {
-            topTitle()
+            topTitle(name: "Andy")
             makeCardList()
             HStack(spacing: 30) {
                 Button("Animation ON") {
@@ -44,8 +44,8 @@ struct CardListView: View {
         })
     }
     
-    func topTitle() -> some View {
-        Text("Andy's Wallet")
+    func topTitle(name: String) -> some View {
+        Text("\(name)'s Wallet")
             .font(.largeTitle)
             .bold()
             .padding()
@@ -65,7 +65,6 @@ struct CardListView: View {
                 makeCard(item)
             }
         }
-        .background(.red.opacity(0.1))
         .overlay {
             Rectangle()
                 .fill(.black
@@ -85,6 +84,15 @@ struct CardListView: View {
             .frame(height: 150)
             .padding(.horizontal)
             .padding(.vertical, 4)
+            .overlay(content: {
+                VStack(content: {
+                    Text(data.name)
+                        .bold()
+                        .font(.system(size: 30))
+                        .padding(.vertical, 12)
+                    Spacer()
+                })
+            })
             .offset(
                 y: CGFloat(data.index) * (isExpandable ? 0 : -130)
             )
