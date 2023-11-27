@@ -10,14 +10,15 @@ import SwiftUI
 struct HorizontalView: View {
     var body: some View {
         ScrollView {
-            ForEach(0..<10) { item in
-                HStack(spacing: 20) {
-                    Text("Bitcoin \(item)")
+            ForEach(currencyDummy, id: \.id) { item in
+                HStack(alignment: .center, spacing: 20) {
+                    Text(item.name)
                         .frame(width: 100)
-                    ZStack {
+                    ZStack(alignment: .center) {
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundStyle(Color.blue.opacity(0.4))
-                        Text("₩ 10,032,021")
+                            .frame(width: 100)
+                        Text(item.priceInUSD.formatted())
                     }
                     .frame(height: 60)
                 }
