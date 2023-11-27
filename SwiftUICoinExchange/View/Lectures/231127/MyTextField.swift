@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyTextField: UIViewRepresentable {
     
+    @Binding var text: String
+    
     func makeUIView(context: Context) -> some UIView {
         let textField = UITextField()
         textField.keyboardType = .numberPad
@@ -18,6 +20,7 @@ struct MyTextField: UIViewRepresentable {
         textField.placeholder = "제목을 입력해주세요"
         textField.textAlignment = .center
         textField.font = .boldSystemFont(ofSize: 15)
+        textField.text = text
         return textField
     }
     

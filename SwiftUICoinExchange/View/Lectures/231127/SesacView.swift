@@ -9,13 +9,19 @@ import SwiftUI
 
 struct SesacView: View {
     
-    @State private var textFieldText = "TEST"
+    @State private var textFieldText = "SwiftUI TextField"
+    @State private var myTextFieldText = "UIKit UITextField"
     
     var body: some View {
         VStack {
             Text(textFieldText) // 단순히 변경된 것을 렌더링
             TextField("THIS IS TextField", text: $textFieldText) // 값을 바꿔야 함 -> 화면에 반영
-            MyTextField()
+            VStack {
+                Text(textFieldText)
+                MyTextField(text: $myTextFieldText) // `@Binding`
+            }
+            .background(Color.gray)
+            .padding()
             MyWebView(url: "https://www.apple.com")
         }
     }
