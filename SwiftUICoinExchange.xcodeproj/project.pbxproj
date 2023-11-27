@@ -18,6 +18,7 @@
 		386309402B141EB3001973AA /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863093F2B141EB3001973AA /* MyWebView.swift */; };
 		386309442B142163001973AA /* SesacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386309432B142163001973AA /* SesacView.swift */; };
 		386309462B142269001973AA /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386309452B142269001973AA /* MyTextField.swift */; };
+		386309482B14327F001973AA /* HorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386309472B14327E001973AA /* HorizontalView.swift */; };
 		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
 		389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F785E2B0C915D000708F2 /* RaceCondition.swift */; };
 		389F78662B0D8727000708F2 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F78652B0D8727000708F2 /* CardListView.swift */; };
@@ -43,6 +44,7 @@
 		3863093F2B141EB3001973AA /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
 		386309432B142163001973AA /* SesacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesacView.swift; sourceTree = "<group>"; };
 		386309452B142269001973AA /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		386309472B14327E001973AA /* HorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalView.swift; sourceTree = "<group>"; };
 		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
 		389F785E2B0C915D000708F2 /* RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCondition.swift; sourceTree = "<group>"; };
 		389F78652B0D8727000708F2 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		3863093E2B141E53001973AA /* 231127 */ = {
 			isa = PBXGroup;
 			children = (
+				386309472B14327E001973AA /* HorizontalView.swift */,
 				386309452B142269001973AA /* MyTextField.swift */,
 				3863093F2B141EB3001973AA /* MyWebView.swift */,
 				386309432B142163001973AA /* SesacView.swift */,
@@ -283,6 +286,7 @@
 				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
 				3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */,
 				389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */,
+				386309482B14327F001973AA /* HorizontalView.swift in Sources */,
 				386309402B141EB3001973AA /* MyWebView.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
 				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
