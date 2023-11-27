@@ -15,6 +15,8 @@
 		3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF532B0C599900EADF16 /* WalletViewModel.swift */; };
 		3817FF562B0C737200EADF16 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF552B0C737100EADF16 /* ListView.swift */; };
 		3817FF582B0C737900EADF16 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817FF572B0C737900EADF16 /* ListViewModel.swift */; };
+		386309402B141EB3001973AA /* MyWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863093F2B141EB3001973AA /* MyWebView.swift */; };
+		386309442B142163001973AA /* SesacView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386309432B142163001973AA /* SesacView.swift */; };
 		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
 		389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F785E2B0C915D000708F2 /* RaceCondition.swift */; };
 		389F78662B0D8727000708F2 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F78652B0D8727000708F2 /* CardListView.swift */; };
@@ -37,6 +39,8 @@
 		3817FF532B0C599900EADF16 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		3817FF552B0C737100EADF16 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		3817FF572B0C737900EADF16 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		3863093F2B141EB3001973AA /* MyWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebView.swift; sourceTree = "<group>"; };
+		386309432B142163001973AA /* SesacView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesacView.swift; sourceTree = "<group>"; };
 		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
 		389F785E2B0C915D000708F2 /* RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCondition.swift; sourceTree = "<group>"; };
 		389F78652B0D8727000708F2 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 				3817FF4E2B0C4F6D00EADF16 /* UpbitAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3863093E2B141E53001973AA /* 231127 */ = {
+			isa = PBXGroup;
+			children = (
+				3863093F2B141EB3001973AA /* MyWebView.swift */,
+				386309432B142163001973AA /* SesacView.swift */,
+			);
+			path = 231127;
 			sourceTree = "<group>";
 		};
 		389F78602B0C95FD000708F2 /* RaceCondition */ = {
@@ -164,6 +177,7 @@
 				38D406682B0B017200B6F783 /* 231120 */,
 				3817FF4C2B0C4F3A00EADF16 /* 231121 */,
 				389F78622B0D86E7000708F2 /* 231122 */,
+				3863093E2B141E53001973AA /* 231127 */,
 			);
 			path = Lectures;
 			sourceTree = "<group>";
@@ -265,10 +279,12 @@
 				38D406542B0AFFED00B6F783 /* WalletView.swift in Sources */,
 				3817FF542B0C599900EADF16 /* WalletViewModel.swift in Sources */,
 				389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */,
+				386309402B141EB3001973AA /* MyWebView.swift in Sources */,
 				38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */,
 				3817FF4A2B0C4A9300EADF16 /* OverlayView.swift in Sources */,
 				389F78662B0D8727000708F2 /* CardListView.swift in Sources */,
 				3817FF562B0C737200EADF16 /* ListView.swift in Sources */,
+				386309442B142163001973AA /* SesacView.swift in Sources */,
 				38D5C6D42B0D99CC0085386D /* CardDetailView.swift in Sources */,
 				38D5C6D62B0DA56A0085386D /* CardModel.swift in Sources */,
 			);
