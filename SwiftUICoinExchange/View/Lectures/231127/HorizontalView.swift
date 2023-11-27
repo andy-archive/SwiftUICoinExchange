@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct HorizontalView: View {
+    
+    @StateObject var viewModel = HorizontalViewModel()
+    
     var body: some View {
         ScrollView {
+            Text(String(viewModel.time))
+            Button(action: {
+                viewModel.timer()
+            }, label: {
+                Text("Timer")
+            })
             GeometryReader { proxy in
                 
                 let graphWidth = proxy.size
