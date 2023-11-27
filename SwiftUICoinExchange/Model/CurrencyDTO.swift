@@ -21,3 +21,9 @@ let currencyDummy = [
     CurrencyDTO(name: "CALLIE"),
     CurrencyDTO(name: "YERI")
 ]
+
+func showlargest() -> Int {
+    let data = currencyDummy.sorted { $0.priceInUSD > $1.priceInUSD
+    }
+    return data[0].priceInUSD
+}

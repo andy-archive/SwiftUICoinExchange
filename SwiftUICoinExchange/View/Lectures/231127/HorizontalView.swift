@@ -17,11 +17,17 @@ struct HorizontalView: View {
                     ZStack(alignment: .center) {
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundStyle(Color.blue.opacity(0.4))
-                            .frame(width: 100)
+                            .frame(width: CGFloat(item.priceInUSD) / 10)
                         Text(item.priceInUSD.formatted())
                     }
-                    .frame(height: 60)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.gray.opacity(0.8))
                 }
+            }
+            .background(Color.yellow.opacity(0.2))
+            .onTapGesture {
+                print(currencyDummy)
+                print(showlargest())
             }
         }
     }
