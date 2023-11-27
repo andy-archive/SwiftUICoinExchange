@@ -16,8 +16,8 @@ struct SesacView: View {
         VStack {
             Text(textFieldText) // 단순히 변경된 것을 렌더링
             TextField("THIS IS TextField", text: $textFieldText) // 값을 바꿔야 함 -> 화면에 반영
-            VStack {
-                Text(textFieldText)
+            VStack(spacing: 30) {
+                Text(myTextFieldText)
                 MyTextField(text: $myTextFieldText) // `@Binding`
             }
             .background(Color.gray)
