@@ -14,7 +14,7 @@ final class HorizontalViewModel: ObservableObject {
     @Published var dummy: [Currency] = []
     
     func timer() {
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
             self.time += 0.5
             self.fetchDummyData() // 0.5초마다 데이터 변화
         }
@@ -30,11 +30,15 @@ final class HorizontalViewModel: ObservableObject {
             Currency(name: "CALLIE"),
             Currency(name: "YERI")
         ]
+    }
+    
+    func showlargest() -> Int {
+        let data = dummy.sorted { $0.priceInUSD > $1.priceInUSD
+        }
+        return data[0].priceInUSD
+    }
         
-        func showlargest() -> Int {
-            let data = dummy.sorted { $0.priceInUSD > $1.priceInUSD
             }
-            return data[0].priceInUSD
         }
     }
 }

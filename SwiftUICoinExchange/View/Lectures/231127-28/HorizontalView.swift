@@ -30,11 +30,14 @@ struct HorizontalView: View {
                             Text(item.name)
                                 .frame(width: graphWidth * 0.2)
                             ZStack(alignment: .leading) {
+                                
+                                let graphSize = CGFloat(item.priceInUSD) / CGFloat(viewModel.showlargest()) * graphWidth
+                                
                                 RoundedRectangle(cornerRadius: 15)
                                     .foregroundStyle(Color.blue.opacity(0.4))
-                                    .frame(width: CGFloat(item.priceInUSD) / 5)
-                                    .frame(maxWidth: graphWidth * 0.7, alignment: .leading)
+                                    .frame(maxWidth: graphSize, alignment: .leading)
                                 Text(item.priceInUSD.formatted())
+                                    .frame(width: graphWidth)
                             }
                             .frame(maxWidth: .infinity)
                             .background(Color.gray.opacity(0.6))
