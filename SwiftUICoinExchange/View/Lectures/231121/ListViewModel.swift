@@ -24,8 +24,7 @@ final class ListViewModel: ObservableObject {
     ]
     
     func fetchAllMarket() {
-        print("START===============")
-        guard let url = URL(string: "https://api.upbit.com/v1/market/all") else { print("=============== URL"); return }
+        guard let url = URL(string: "https://api.upbit.com/v1/market/all") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             

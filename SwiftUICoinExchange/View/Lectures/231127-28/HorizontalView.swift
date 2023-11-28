@@ -10,11 +10,18 @@ import SwiftUI
 struct HorizontalView: View {
     
     /* View의 변화를 @StateObject를 통해 ViewModel에 전달 */
-    @StateObject var viewModel = HorizontalViewModel()
+    @StateObject var viewModel = HorizontalViewModel(
+        market: Market(
+            market: "MACY",
+            koreanName: "메이시",
+            englishName: "Macy"
+        )
+    )
     
     var body: some View {
         ScrollView {
             VStack(spacing: 20, content: {
+                Text(viewModel.market.koreanName)
                 Text(String(viewModel.time))
                 Button(action: {
                     viewModel.timer()

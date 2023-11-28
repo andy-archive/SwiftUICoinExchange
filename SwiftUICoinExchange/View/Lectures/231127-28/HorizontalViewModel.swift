@@ -15,6 +15,12 @@ final class HorizontalViewModel: ObservableObject {
     @Published var askOrderBook: [OrderBook] = []
     @Published var bidOrderBook: [OrderBook] = []
     
+    let market: Market
+    
+    init(market: Market) {
+        self.market = market
+    }
+    
     func timer() {
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
             self.time += 0.5
