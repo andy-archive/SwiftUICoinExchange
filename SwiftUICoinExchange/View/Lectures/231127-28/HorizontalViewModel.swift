@@ -58,11 +58,7 @@ final class HorizontalViewModel: ObservableObject {
     func fetchOrderbook() {
         guard let url = URL(string: "https://api.upbit.com/v1/orderbook?markets=BTC-ETH") else { return }
         
-        print(url)
-        
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            print(response)
             
             if let error {
                 
@@ -106,6 +102,8 @@ final class HorizontalViewModel: ObservableObject {
                         
                         self.askOrderBook = ask
                         self.bidOrderBook = bid
+                        
+                        print("============ ASSIGNED")
                     }
                     
                     print("COMPLETE ---------------------")

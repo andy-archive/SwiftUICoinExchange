@@ -14,29 +14,37 @@ struct HorizontalView: View {
     
     var body: some View {
         ScrollView {
-            Text(String(viewModel.time))
-            Button(action: {
-                viewModel.timer()
-            }, label: {
-                Text("Timer")
+            VStack(spacing: 20, content: {
+                Text(String(viewModel.time))
+                Button(action: {
+                    viewModel.timer()
+                }, label: {
+                    Text("Timer")
+                })
+                Button(action: {
+                    viewModel.fetchOrderbook()
+                }, label: {
+                    Text("FETCH OrderBook")
+                })
             })
+
             GeometryReader { proxy in
                 
                 let graphWidth = proxy.size.width
                 
                 VStack(spacing: 20) {
-                    ForEach(viewModel.dummy, id: \.id) { item in
+                    ForEach(viewModel.askOrderBook, id: \.id) { item in
                         HStack(alignment: .center, spacing: 10) {
-                            Text(item.name)
+                            Text(item.price.formatted())
                                 .frame(width: graphWidth * 0.2)
                             ZStack(alignment: .leading) {
                                 
-                                let graphSize = CGFloat(item.priceInUSD) / CGFloat(viewModel.showlargest()) * graphWidth
+                                let graphSize = CGFloat(item.price) / CGFloat(viewModel.showlargestAskSize()) * graphWidth
                                 
                                 RoundedRectangle(cornerRadius: 15)
                                     .foregroundStyle(Color.blue.opacity(0.4))
                                     .frame(maxWidth: graphSize, alignment: .leading)
-                                Text(item.priceInUSD.formatted())
+                                Text(item.price.formatted())
                                     .frame(width: graphWidth)
                             }
                             .frame(maxWidth: .infinity)
