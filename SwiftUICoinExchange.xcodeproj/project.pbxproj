@@ -110,13 +110,20 @@
 		3863093E2B141E53001973AA /* 231127 */ = {
 			isa = PBXGroup;
 			children = (
-				386309472B14327E001973AA /* HorizontalView.swift */,
-				3863094B2B143C85001973AA /* HorizontalViewModel.swift */,
 				386309452B142269001973AA /* MyTextField.swift */,
 				3863093F2B141EB3001973AA /* MyWebView.swift */,
 				386309432B142163001973AA /* SesacView.swift */,
 			);
 			path = 231127;
+			sourceTree = "<group>";
+		};
+		38693C092B157B6D00B780FA /* 231127-28 */ = {
+			isa = PBXGroup;
+			children = (
+				386309472B14327E001973AA /* HorizontalView.swift */,
+				3863094B2B143C85001973AA /* HorizontalViewModel.swift */,
+			);
+			path = "231127-28";
 			sourceTree = "<group>";
 		};
 		389F78602B0C95FD000708F2 /* RaceCondition */ = {
@@ -190,6 +197,7 @@
 				3817FF4C2B0C4F3A00EADF16 /* 231121 */,
 				389F78622B0D86E7000708F2 /* 231122 */,
 				3863093E2B141E53001973AA /* 231127 */,
+				38693C092B157B6D00B780FA /* 231127-28 */,
 			);
 			path = Lectures;
 			sourceTree = "<group>";
