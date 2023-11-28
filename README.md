@@ -7,7 +7,7 @@
 📦 SwiftUICoinExchange
 ├──📄 README.md
 ├──📂 SwiftUICoinExchange
-│   ├──📂 Application  # @main
+│   ├──📂 Application # @main
 │   ├──📂 Assets
 │   ├──📂 Model
 │   ├──📂 Network
@@ -16,8 +16,9 @@
 │   └──📂 View
 │       └──📂 Lectures
 │           ├──📂 231120
-│           └──📂 231121
-│           └──📂 231122
+│           ├──📂 231121
+│           ├──📂 231122
+│           └──📂 231127 # UIViewRepresentable (UIKit in SwiftUI) & GeometryReader & ViewModel 분리
 └──📂 SwiftUICoinExchange.xcodeproj
 ```
 
