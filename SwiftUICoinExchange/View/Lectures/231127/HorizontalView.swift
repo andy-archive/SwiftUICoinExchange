@@ -25,7 +25,7 @@ struct HorizontalView: View {
                 let graphWidth = proxy.size.width
                 
                 VStack(spacing: 20) {
-                    ForEach(currencyDummy, id: \.id) { item in
+                    ForEach(viewModel.dummy, id: \.id) { item in
                         HStack(alignment: .center, spacing: 10) {
                             Text(item.name)
                                 .frame(width: graphWidth * 0.2)
