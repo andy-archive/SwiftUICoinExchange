@@ -73,6 +73,7 @@ struct AndyOrderBook: Widget {
         }
         .configurationDisplayName("보유 코인")
         .description("시세를 확인하세요 :)")
+        .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }
 }
 
@@ -82,3 +83,13 @@ struct AndyOrderBook: Widget {
     SimpleEntry(date: .now, emoji: "😀")
     SimpleEntry(date: .now, emoji: "🤩")
 }
+
+/*
+ private let supportedFamilies:[WidgetFamily] = {
+     if #available(iOSApplicationExtension 16.0, *) {
+         return [.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular]
+     } else {
+         return [.systemSmall, .systemMedium]
+     }
+ }()
+ */
