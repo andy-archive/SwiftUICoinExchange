@@ -9,15 +9,18 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    /* 📌 WidgetKit 최초로 렌더링 할 때 사용 -> 스켈레톤 뷰로 렌더링이 된다 */
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), emoji: "😀")
     }
 
+    /* 위젯 갤러리 안에 미리 보기 화면 */
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), emoji: "😀")
         completion(entry)
     }
 
+    /* 위젯 상태에 대한 변경 시점을 적용 */
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
@@ -29,6 +32,7 @@ struct Provider: TimelineProvider {
             entries.append(entry)
         }
 
+        /* 타임 라인의 마지막 날짜 이후 새로운 타임라인을 요청하도록 설정 */
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -44,17 +48,17 @@ struct AndyOrderBookEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
+            Text("시간:")
             Text(entry.date, style: .time)
 
-            Text("Emoji:")
+            Text("이모지:")
             Text(entry.emoji)
         }
     }
 }
 
 struct AndyOrderBook: Widget {
-    let kind: String = "AndyOrderBook"
+    let kind: String = "AndyOrderBook" // 📌 위젯의 고유한 문자열
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -67,8 +71,8 @@ struct AndyOrderBook: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("보유 코인")
+        .description("시세를 확인하세요 :)")
     }
 }
 
