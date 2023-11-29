@@ -24,6 +24,12 @@
 		38693C0B2B157F3A00B780FA /* OrderBookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38693C0A2B157F3A00B780FA /* OrderBookDTO.swift */; };
 		38693C112B15863200B780FA /* Orderbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38693C102B15863200B780FA /* Orderbook.swift */; };
 		386D55862B0C80D400EAD433 /* BannerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D55852B0C80D400EAD433 /* BannerTestView.swift */; };
+		387463EA2B16D238009FAB2C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387463E92B16D238009FAB2C /* WidgetKit.framework */; };
+		387463EC2B16D238009FAB2C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387463EB2B16D238009FAB2C /* SwiftUI.framework */; };
+		387463EF2B16D238009FAB2C /* AndyOrderBookBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387463EE2B16D238009FAB2C /* AndyOrderBookBundle.swift */; };
+		387463F12B16D238009FAB2C /* AndyOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387463F02B16D238009FAB2C /* AndyOrderBook.swift */; };
+		387463F32B16D23A009FAB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387463F22B16D23A009FAB2C /* Assets.xcassets */; };
+		387463F72B16D23A009FAB2C /* AndyOrderBookExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 387463E72B16D238009FAB2C /* AndyOrderBookExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		389F785F2B0C915D000708F2 /* RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F785E2B0C915D000708F2 /* RaceCondition.swift */; };
 		389F78662B0D8727000708F2 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F78652B0D8727000708F2 /* CardListView.swift */; };
 		38D406522B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D406512B0AFFED00B6F783 /* SwiftUICoinExchangeApp.swift */; };
@@ -35,6 +41,30 @@
 		38D5C6D42B0D99CC0085386D /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5C6D32B0D99CC0085386D /* CardDetailView.swift */; };
 		38D5C6D62B0DA56A0085386D /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5C6D52B0DA56A0085386D /* CardModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		387463F52B16D23A009FAB2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38D406462B0AFFED00B6F783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 387463E62B16D238009FAB2C;
+			remoteInfo = AndyOrderBookExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		387463F82B16D23A009FAB2C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				387463F72B16D23A009FAB2C /* AndyOrderBookExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3817FF422B0C43DE00EADF16 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
@@ -54,6 +84,13 @@
 		38693C0A2B157F3A00B780FA /* OrderBookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBookDTO.swift; sourceTree = "<group>"; };
 		38693C102B15863200B780FA /* Orderbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orderbook.swift; sourceTree = "<group>"; };
 		386D55852B0C80D400EAD433 /* BannerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTestView.swift; sourceTree = "<group>"; };
+		387463E72B16D238009FAB2C /* AndyOrderBookExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AndyOrderBookExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		387463E92B16D238009FAB2C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		387463EB2B16D238009FAB2C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		387463EE2B16D238009FAB2C /* AndyOrderBookBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndyOrderBookBundle.swift; sourceTree = "<group>"; };
+		387463F02B16D238009FAB2C /* AndyOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndyOrderBook.swift; sourceTree = "<group>"; };
+		387463F22B16D23A009FAB2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		387463F42B16D23A009FAB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389F785E2B0C915D000708F2 /* RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCondition.swift; sourceTree = "<group>"; };
 		389F78652B0D8727000708F2 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +105,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		387463E42B16D238009FAB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387463EC2B16D238009FAB2C /* SwiftUI.framework in Frameworks */,
+				387463EA2B16D238009FAB2C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38D4064B2B0AFFED00B6F783 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +208,26 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		387463E82B16D238009FAB2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				387463E92B16D238009FAB2C /* WidgetKit.framework */,
+				387463EB2B16D238009FAB2C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		387463ED2B16D238009FAB2C /* AndyOrderBook */ = {
+			isa = PBXGroup;
+			children = (
+				387463EE2B16D238009FAB2C /* AndyOrderBookBundle.swift */,
+				387463F02B16D238009FAB2C /* AndyOrderBook.swift */,
+				387463F22B16D23A009FAB2C /* Assets.xcassets */,
+				387463F42B16D23A009FAB2C /* Info.plist */,
+			);
+			path = AndyOrderBook;
+			sourceTree = "<group>";
+		};
 		389F78602B0C95FD000708F2 /* RaceCondition */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +251,8 @@
 				38D406612B0B00B000B6F783 /* README.md */,
 				38D4065F2B0B009C00B6F783 /* .gitignore */,
 				38D406502B0AFFED00B6F783 /* SwiftUICoinExchange */,
+				387463ED2B16D238009FAB2C /* AndyOrderBook */,
+				387463E82B16D238009FAB2C /* Frameworks */,
 				38D4064F2B0AFFED00B6F783 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -193,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				38D4064E2B0AFFED00B6F783 /* SwiftUICoinExchange.app */,
+				387463E72B16D238009FAB2C /* AndyOrderBookExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +328,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		387463E62B16D238009FAB2C /* AndyOrderBookExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387463FB2B16D23A009FAB2C /* Build configuration list for PBXNativeTarget "AndyOrderBookExtension" */;
+			buildPhases = (
+				387463E32B16D238009FAB2C /* Sources */,
+				387463E42B16D238009FAB2C /* Frameworks */,
+				387463E52B16D238009FAB2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AndyOrderBookExtension;
+			productName = AndyOrderBookExtension;
+			productReference = 387463E72B16D238009FAB2C /* AndyOrderBookExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		38D4064D2B0AFFED00B6F783 /* SwiftUICoinExchange */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38D4065C2B0AFFEF00B6F783 /* Build configuration list for PBXNativeTarget "SwiftUICoinExchange" */;
@@ -266,10 +352,12 @@
 				38D4064A2B0AFFED00B6F783 /* Sources */,
 				38D4064B2B0AFFED00B6F783 /* Frameworks */,
 				38D4064C2B0AFFED00B6F783 /* Resources */,
+				387463F82B16D23A009FAB2C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				387463F62B16D23A009FAB2C /* PBXTargetDependency */,
 			);
 			name = SwiftUICoinExchange;
 			productName = SwiftUICoinExchange;
@@ -283,9 +371,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					387463E62B16D238009FAB2C = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					38D4064D2B0AFFED00B6F783 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -305,11 +396,20 @@
 			projectRoot = "";
 			targets = (
 				38D4064D2B0AFFED00B6F783 /* SwiftUICoinExchange */,
+				387463E62B16D238009FAB2C /* AndyOrderBookExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		387463E52B16D238009FAB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387463F32B16D23A009FAB2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38D4064C2B0AFFED00B6F783 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +424,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		387463E32B16D238009FAB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				387463EF2B16D238009FAB2C /* AndyOrderBookBundle.swift in Sources */,
+				387463F12B16D238009FAB2C /* AndyOrderBook.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38D4064A2B0AFFED00B6F783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,7 +465,78 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		387463F62B16D23A009FAB2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 387463E62B16D238009FAB2C /* AndyOrderBookExtension */;
+			targetProxy = 387463F52B16D23A009FAB2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		387463F92B16D23A009FAB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UNP2C529F;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AndyOrderBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AndyOrderBook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.SwiftUICoinExchange.AndyOrderBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		387463FA2B16D23A009FAB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3UNP2C529F;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AndyOrderBook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AndyOrderBook;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.SwiftUICoinExchange.AndyOrderBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		38D4065A2B0AFFEF00B6F783 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,6 +656,7 @@
 		38D4065D2B0AFFEF00B6F783 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -509,6 +690,7 @@
 		38D4065E2B0AFFEF00B6F783 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +724,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		387463FB2B16D23A009FAB2C /* Build configuration list for PBXNativeTarget "AndyOrderBookExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				387463F92B16D23A009FAB2C /* Debug */,
+				387463FA2B16D23A009FAB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		38D406492B0AFFED00B6F783 /* Build configuration list for PBXProject "SwiftUICoinExchange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
